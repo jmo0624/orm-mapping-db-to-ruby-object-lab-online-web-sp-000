@@ -25,7 +25,7 @@ class Student
   def self.find_by_name(name)
     # find the student in the database given a name
     # return a new instance of the Student class
-    sql <<-SQL
+    sql = <<-SQL
       SELECT * FROM students
       WHERE name = ?
       LIMIT 1
@@ -37,7 +37,7 @@ class Student
   end
   
   def self.count_All_students_in_grade_9
-    sql <<-SQL
+    sql = <<-SQL
       SELECT * FROM students
       WHERE grade = 9
     SQL
